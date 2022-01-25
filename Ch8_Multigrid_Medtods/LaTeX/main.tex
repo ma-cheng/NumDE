@@ -1,0 +1,62 @@
+\documentclass{homework}
+%\usepackage{ctex}
+\author{马成 3190102309}
+\class{Num PDE}
+\date{\today}
+\title{Homework \#1}
+%\address{Bayt El-Hikmah}
+
+\graphicspath{{./media/}}
+
+\begin{document} \maketitle
+
+\question Exercise 8.8.
+
+	In the following proof, $||\cdot||_2$ is denoted by $||\cdot||$. According to \textbf{Definition 8.4} and \textbf{Lemma 8.5}, we have
+	\begin{eqnarray}\label{eq:1}
+		\frac{||\textbf{e}||}{||\textbf{u}||} = \frac{||A^{-1} \textbf{r}||}{||A^{-1} \textbf{f}||}
+	\end{eqnarray}
+	
+	Since
+	\begin{eqnarray}\label{eq:2}
+		A^{-1} \textbf{r} = A^{-1} \cdot \textbf{r},\quad r = A \cdot A^{-1}\textbf{r},
+	\end{eqnarray}
+	we have
+	\begin{eqnarray}\label{eq:3}
+		\frac{||\textbf{r}||}{||A||} \leq ||A^{-1}\textbf{r}|| \leq ||A^{-1} \textbf{r}||
+	\end{eqnarray}
+	
+	Similarly,
+	\begin{eqnarray}\label{eq:4}
+		\frac{||\textbf{f}||}{||A||} \leq ||A^{-1}\textbf{f}|| \leq ||A^{-1} \textbf{f}||
+	\end{eqnarray}
+	
+	Substitute \ref{eq:3} and \ref{eq:4} into \ref{eq:1}, then we have 
+	\begin{equation}
+		\frac{1}{\operatorname{cond}(A)} \frac{\|\mathbf{r}\|_{2}}{\|\mathbf{f}\|_{2}} \leq \frac{\|\mathbf{e}\|_{2}}{\|\mathbf{u}\|_{2}} \leq \operatorname{cond}(A) \frac{\|\mathbf{r}\|_{2}}{\|\mathbf{f}\|_{2}}
+	\end{equation}
+
+\question Exercise 8.9.
+
+	According to \textbf{Example 8.2}, we have
+	\begin{eqnarray}
+		\begin{aligned}
+			\cond(A) &= \frac{\max \lambda_k(A)}{\min \lambda_k(A)} = \frac{\sin^2 \frac{n-1}{2n}\pi}{\sin^2 \frac{1}{2n}\pi} \\
+			&= \frac{1}{\tan^2 \frac{1}{2n} \pi } \approx \frac{4n^2}{\pi^2}
+		\end{aligned}
+	\end{eqnarray}
+
+	\textbf{For $n = 8$}, we have
+	\begin{eqnarray}
+		\cond(A) \approx \frac{256}{\pi^2}
+	\end{eqnarray}
+	
+	\textbf{For $n = 1024$}, we have
+	\begin{eqnarray}
+		\cond(A) \approx \frac{4194304}{\pi^2}
+	\end{eqnarray}
+	
+\question Exercise 8.
+
+
+\end{document}
