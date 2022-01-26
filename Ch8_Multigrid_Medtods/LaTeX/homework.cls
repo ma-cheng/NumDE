@@ -22,6 +22,7 @@
 \RequirePackage[caption=false]{subfig}
 \RequirePackage{hyperref} % For pdf bookmarks, other information and org-mode
 \RequirePackage{hwsymb, hwlst} % By Tashfeen
+\RequirePackage{float}
 \hypersetup {
   pdfstartview=FitH,
   colorlinks=true,
