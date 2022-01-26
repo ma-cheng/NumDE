@@ -9,6 +9,8 @@
 % Latex documentation: https://en.wikibooks.org/wiki/LaTeX
 % 'em' is the horizontal space unit and 'ex' is the vertical
 
+
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{homework}[2021/01/01 Homework]
 \DeclareOption{handout}{\PassOptionsToClass{\CurrentOption}{amsart}}
@@ -31,6 +33,7 @@
 %CTex
 \RequirePackage{ctex}
 \CTEXoptions[today=old]
+\renewcommand{\figurename}{Figure} %图片标题为英文
 
 % Question command
 \gdef\@unitname{Question}

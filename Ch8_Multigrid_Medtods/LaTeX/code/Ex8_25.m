@@ -13,7 +13,6 @@ plot(t, f3, 'k','linewidth', 2); plot(t, f4, 'k','linewidth', 2)
 plot([0 0], [-1.05 1.05], 'k','linewidth', 2); plot([0, 101], [0, 0], 'k', 'linewidth', 2)
 xlim([0 n+1]); ylim([-1.1 1.1]);
 axis off
-str = {'$$\omega=1/3$$','$$\omega=1/2$$','$$\omega=2/3$$','$$\omega=1$$'};
 scatter(0,1,'k+'); scatter(0,-1,'k+'); scatter(50,0,'k+'); scatter(100,0,'k+');
 text(-2,1,'$1$','interpreter', 'latex', 'fontsize', 12)
 text(-2,-1,'$-1$','interpreter', 'latex', 'fontsize', 12)
