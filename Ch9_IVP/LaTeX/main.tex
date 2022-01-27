@@ -1,0 +1,84 @@
+\documentclass{homework}
+%\usepackage{ctex}
+\author{马成 3190102309}
+\class{Num PDE}
+\date{\today}
+\title{Homework \#2(Chapter 9)}
+%\address{Bayt El-Hikmah}
+
+\graphicspath{{./media/}}
+
+\begin{document} \maketitle
+
+\question Exercise 9.9.
+
+	The NRM-1 holds obviously. For NRM-2, if $||\bv|| = 0$, then $\forall \bx\in\FF^n, T\bx = \textbf{0}$, i.e. $T = \textbf{0}$. NRM-3 holds, because for any$ a\in \FF,\ \bx\in\FF^n$ we have $(aT)\bx = T(a\bx)$. NRM-4 holds, because for any $T_1,T_2 \in \mathcal{L}(\FF^n, \FF^m)$ and $\bx \in \FF^n$, we have
+	\begin{eqnarray}
+		||(T_1+T_2)\bx|| = ||T_1\bx + T_2\bx|| \leq ||T_1\bx|| + ||T_2\bx|| \leq (||T_1||+||T_2||) \bx
+	\end{eqnarray}
+	
+\question Exercise 9.14.
+
+	We verify each proposition in \textbf{Definition C.74} respectively. 
+	
+	\textbf{(1)} According to \textbf{Definition 9.8}, $d(T,S) > 0$. 
+	
+	\textbf{(2)} if $d(T,S) = ||T-S|| = \textbf{0}$, then $T - S = \textbf{0}$, i.e. $T = S$. Contrarily, if $T = S$, then $d(T,S) = 0$.
+	
+	\textbf{(3)} $d(T,S) = ||T-S|| = ||S-T|| = d(S,T)$.
+	
+	\textbf{(4)} For any $R, S, T \in \mathcal{L}(\FF^n, \FF^m)$, then 
+	\begin{eqnarray}
+		d(R,S) + d(S,T) = ||R- S|| + ||S -T|| \geq ||(R-S)+(S-T) || = ||R-T|| = d(R,T)
+	\end{eqnarray}
+
+\question Exercise 9.15.
+	Suppose $A\in \CC^{m\times n}$ is the matrix representation of $T$ under standard basis vectors. Since $T\be_j\in\RR^m$, then $A\in \RR^{m\times n}$. Thus $T$ carries $\RR^n$ into $\RR^m$. Obviously, we have
+	\begin{eqnarray}
+		||T|| = \max_{\bz\in\CC^n:|\bz|=1} |T\bz|
+	\end{eqnarray}
+	Hence $||T|| = \sup_{\bz\in\CC^n:|\bz|\leq1} |T\bz|$.
+	
+	Suppose the real symmetric matrix $A^TA$ has eigenvalues $\lambda_1, \cdots,\lambda_n$ and corresponding eigenvectors $v_1,\cdots, v_n$(WLOG, eigenvectors are orthonormal). Then 
+	\begin{eqnarray}
+		\forall\bz\in\CC^n:|\bz|=1\ \exists c_1,\cd,c_n\in\CC,\ s.t. 
+		\left\{
+			\begin{aligned}
+				&|c_1|^2 + \cd + |c_n|^2 = 1 \\
+				&\bz = c_1v_1 + \cd + c_nv_n
+			\end{aligned}
+		\right.
+	\end{eqnarray}
+	Then
+	\begin{eqnarray}
+		\begin{aligned}
+			|A\bz| &= \bar{\bz}^T A^T A z = (\bar{c_1}v_1^T + \cd + \bar{c_n}v_n^T ) A^TA(c_1v_1 + \cd + c_nv_n)\\
+			&= (\bar{c_1}v_1^T + \cd + \bar{c_n}v_n^T )(\lambda_1 c_1v_1 + \cd + \lambda_nc_nv_n)\\
+			&= \lambda_1|c_1|^2+\cd+\lambda_n|c_n|^2
+			= |A(|c_1|v_1+ \cd +|c_n|v_n)| =: |A\bx|\ (\bx\in\RR^n: |\bx|=1),
+		\end{aligned}
+	\end{eqnarray}
+	which indicates that
+	\begin{eqnarray}
+		\forall \bz\in\CC^n: |\bz|=1\ \exists \bx \in\RR^n:|\bx|=1,\ s.t.\ |A\bz| = |A\bx|.
+	\end{eqnarray}
+	So 
+	\begin{eqnarray}
+		||T|| = \max_{\bz\in\CC^n:|\bz|=1} |T\bz| = \max_{\bx\in\RR^n:|\bx|=1} |T\bx| = \sup_{\bx\in\RR^n:|\bx|\leq1} |T\bx|
+	\end{eqnarray}
+	
+\question Exercise 9.17.
+	
+	NRM-1,2,3 obviously hold. Suppose $T_1,T_2\in\mathcal{L}(\FF^n, \FF^m)$, and $A, B$ are the matrix of $T_1,T_2$ respectively. According to \textbf{Corollary 9.18} we know that 
+	\begin{eqnarray}\label{eq:1}
+		|T_1| = (\sum_{i,j}|a_{ij}|^2)^{\frac{1}{2}},\quad |T_2| = (\sum_{i,j}|b_{ij}|^2)^{\frac{1}{2}},\quad 
+		|T_1+T_2| = (\sum_{i,j}|a_{ij}+b_{ij}|^2)^{\frac{1}{2}}
+	\end{eqnarray}
+	Then from \ref{eq:1}, we see that $|T_1|, |T_2|$ can be regarded as the 2-norm of vectors
+	\begin{eqnarray}
+		\begin{aligned}
+			(a_{11},\cd,a_{1n},\cd,a_{m1},\cd,a_{mn}),\ (b_{11},\cd,b_{1n},\cd,b_{m1},\cd,b_{mn})
+		\end{aligned}
+	\end{eqnarray}
+	respectively. Thus NRM-4 follows from the property of 2-norm.
+\end{document}

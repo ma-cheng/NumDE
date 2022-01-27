@@ -36,3 +36,6 @@
 *.log
 *.out
 *.synctex.gz
+
+# 
+note.txt

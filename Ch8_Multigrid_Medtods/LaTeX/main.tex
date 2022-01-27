@@ -167,5 +167,85 @@
 		\end{minipage}
 	\end{figure}
 	\lstinputlisting[language=Python, caption={code for the above figure}, label=gcd]{code/Ex8_28.py}
+
+\question Exercise 8.41.
 	
+	According to \textbf{Lemma 8.39}, we have 
+	\begin{eqnarray}
+		\begin{aligned}
+			\text{F}&\text{MG computation cost} \\
+			&=(\frac{2}{1-2^{-d}})(1+2^{-d}+2^{-2d}+\cdots+2^{-nd})\text{WU} < 
+			\frac{2}{(1-2^{-d})^2}\text{WU}
+		\end{aligned}
+	\end{eqnarray}
+	
+	Let $D = 1,2,3$ respectively, we have 
+	\begin{eqnarray}
+		\begin{aligned}
+			\text{computation cost}|_{D=1} &= 8 \\
+			\text{computation cost}|_{D=2} &= \frac{32}{9} \\
+			\text{computation cost}|_{D=3} &= \frac{128}{49} \\
+		\end{aligned}
+	\end{eqnarray}
+	
+\question Exercise 8.47.
+
+	For $k \ll \frac{n}{2}$, we know that $s_k = O(\frac{k^2}{n^2})$ and the exponent of $\lambda_k$ and $\lambda_{k'}$ are both less than 1, thus $c_1,c_2$ are both small. Since $k'\in[\frac{n}{2},n-1]$, then for large $\nu_1$, $\lambda_{k'}^{\nu_1} \ra 0$. So $c_3, c_4$ are both small.
+	
+	Hence, all four $c_i$'s are small, particularly for $k \ll \frac{n}{2}$ or as $\nu$ becomes large.
+	
+	\begin{figure}[bhpt]
+	%\hspace{-40.pt}
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_00.png}
+	\caption{(a)}
+	\end{minipage}
+	\hspace{-0.2in}
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_02.png}
+	\caption{(b)}
+	\end{minipage}
+	
+	
+	\hspace{-40.0pt}
+	\par \vspace{-10.pt}
+	\hspace{-36.0pt}
+	
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_11.png}
+	\caption{(c)}
+	\end{minipage}
+	\hspace{-0.2in}
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_20.png}
+	\caption{(d)}
+	\end{minipage}
+	 
+	\hspace{-40.0pt}
+	\par \vspace{-10.pt}
+	\hspace{-36.0pt}
+	 
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_22.png}
+	\caption{(e)}
+	\end{minipage}
+	\hspace{-0.2in}
+	\begin{minipage}[b]{0.5 \textwidth}
+	\includegraphics[width=\textwidth]{Ex8_47_40.png}
+	\caption{(f)}
+	\end{minipage}
+	\end{figure}
+	\clearpage
+	
+	\lstinputlisting[language=Python, caption={code for the above figure}, label=gcd]{code/Ex8_47.py}
+	
+\question Exercise 8.51.
+
+	According to \textbf{Lemmas 8.48} and \textbf{8.49}, we have
+	\begin{eqnarray}
+		\begin{aligned}
+			\mR(I_h^{2h}) = \mR(I_{2h}^h) = \frac{n}{2} - 1,\quad 
+			\mN(I_h^{2h}) = n - 1-\mR(I_h^{2h}) = \frac{n}{2}
+		\end{aligned}
+	\end{eqnarray}
 \end{document}
